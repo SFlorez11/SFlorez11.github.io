@@ -1,0 +1,339 @@
+﻿.program_box{
+	width: 99vw;
+	height: 350vh;
+	display: grid;
+	grid-template-rows: 8.5% 50% 55%;
+	grid-template-columns: 1fr;
+	position: relative;
+}
+.program_header{
+	display: grid;
+	grid-template-rows: repeat(6, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+}
+.program_title{
+	width: 140%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-row: 2 / 4;
+	grid-column:  1 / 3;
+}
+.program_title > h1{
+	color: #00bdaa;
+	letter-spacing: 2px;
+	word-spacing: 1px;
+	font-size: 4em;
+}
+.program_text{
+	width: 187%;
+	height: 90%;
+	grid-column: 2 / 3;
+	grid-row: 3 / 7;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	margin-left: -180px;
+}
+.program_text > p{
+	letter-spacing: 0.5px;
+	word-spacing: 0.5px;
+	font-size: 1.05em;
+	line-height: 29px;
+	padding: 20px;
+}
+.program_text > p:nth-child(3){
+	font-weight: bold;
+	font-size: 1.3em;
+	color: #6c6fbd;
+	padding: 20px;
+}
+.program_text > p:nth-child(3) > img{
+	position: absolute;
+	width: 27px;
+	height: 27px;
+	margin: 15px;
+	margin-top: 3px;
+}
+.program_video{
+	background-color: rgba(0,0,0,0.85);
+	width: 99vw;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	visibility: hidden;
+	cursor: pointer;
+}
+.program_video > iframe{
+	border-radius: 10px;
+	overflow: hidden;
+	margin-top: -30%;
+}
+.program_ph{
+	grid-row: 1 / 6;
+	grid-column: 3 / 5;
+	background-image: url(../img/girl1.png);
+	background-size: 70%;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	position: relative;
+}
+.program_cloud{
+	grid-column: 1 / 5;
+	grid-row: 4 / 7;
+	background-image: url(../img/back_books.png);
+	background-size: 35%;
+	background-repeat: no-repeat;
+	background-position: top right;
+	opacity: 0.9;
+	position: relative;
+}
+.my_program{
+	margin-top: 20px;
+	grid-column: 1 / -1;
+	width: 100%;
+	height: 878px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;	
+	transition: 1s all;
+	z-index: 1;
+	position: relative;
+}
+.my_program::before{
+	content: '';
+	position: absolute;
+	top: -27%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url(../img/dots_violet.png);
+	background-size: cover;
+	background-position: top;
+	z-index: 1;
+	opacity: 0.95;
+}
+.my_program > li{
+	z-index: 99;
+	border-radius: 15px;
+	width: 250px;
+	height: 75%;
+	overflow: hidden;
+	margin: 3px;
+	cursor: pointer;
+	display: block;
+	transition: 1.1s all;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+.seasons{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+.seasons > h2{
+	font-size: 1.2em;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	letter-spacing: 0.5px;
+	word-spacing: 0.5px;
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	transition: 2s all;
+}
+.season_text{
+	display: none;
+	transition: 1.5s all;
+}
+.seasons:hover > .season_text{
+	width: 90%;
+	height: 80%;
+	justify-self: center;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	transition: 1.5s all;
+}
+.plans{
+	opacity: 0;
+	transition: 2.8s all;
+}
+.seasons > .season_text:hover > .plans{
+	opacity: 1;
+	width: 100%;
+	height: 30%;
+	background-color: #fff;
+	border-radius: 10px;
+	display: grid;
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-columns: 70% 30%;
+	grid-row-gap: 20px;
+	transition: 2.8s all;
+}
+.goal{
+	margin-left: 13px;
+	color: #000;
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	font-size: 1.5em;
+}
+.my_skill{
+	width: 70%;
+	margin-left: 13px;
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 1em;
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+}
+.tool{
+	margin-left: 13px;
+	font-size: 0.9em;
+	grid-column: 1 / 2;
+	grid-row: 4 / 5;
+	margin-top: -20px;
+}
+.my_time{
+	display: flex;
+	border-radius: 10px;
+	width: 80%;
+	height: 35px;
+	justify-self: flex-end;
+	justify-content: center;
+	align-items: center;
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+	color: #fff;
+}
+.seasons:nth-child(1) > div > div > .my_time{
+	background-color: #56ab2f;
+}
+.seasons:nth-child(2) > div > div > .my_time{
+	background-color: #ff9966;
+}
+.seasons:nth-child(3) > div > div > .my_time{
+	background-color: #fc4a1a;
+}
+.seasons:nth-child(4) > div > div > .my_time{
+	background-color: #36d1dc;
+}
+.seasons:nth-child(1) > div > div:nth-child(3) > .my_skill{
+	margin-top: -5px;
+}
+.seasons:nth-child(1) > div > div:nth-child(3) > .tool{
+	margin-top: -25px;
+}
+.seasons:nth-child(2) > div > div:nth-child(2) > .my_skill{
+	margin-top: -7px;
+}
+.seasons:nth-child(2) > div > div:nth-child(2) > .tool{
+	margin-top: -27px;
+}
+.seasons:nth-child(4) > div > div:nth-child(3) > .my_skill{
+	margin-top: -10px;
+}
+.seasons:nth-child(4) > div > div:nth-child(3) > .tool{
+	margin-top: -30px;
+}
+.plans_ph{
+	grid-column: 2 / 3;
+	grid-row: 2 / 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.plan_logo{
+	width: 70%;
+	height: 75%;
+}
+.seasons:nth-child(1) > div > div:nth-child(1) > .plans_ph > div{
+	background-image: url(../img/teach.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.seasons:nth-child(1) > div > div:nth-child(2) > .plans_ph > div{
+	height: 105%;
+	margin-top: -27px;
+	background-image: url(../img/html.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.seasons:nth-child(1) > div > div:nth-child(3) > .plans_ph > div{
+	background-image: url(../img/line.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.seasons:nth-child(2) > div > div:nth-child(1) > .plans_ph > div{
+	background-image: url(../img/english.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.seasons:nth-child(2) > div > div:nth-child(2) > .plans_ph > div{
+	height: 102%;
+	margin-top: -35px;
+	background-image: url(../img/montage.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.seasons:nth-child(2) > div > div:nth-child(3) > .plans_ph > div{
+	height: 108%;
+	margin-top: -30px;
+	background-image: url(../img/books.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.seasons:nth-child(3) > div > div:nth-child(1) > .plans_ph > div{
+	height: 80%;
+	margin-top: -8px;
+	background-image: url(../img/guitar.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.seasons:nth-child(3) > div > div:nth-child(2) > .plans_ph > div{
+	height: 78%;
+	margin-top: -4px;
+	background-image: url(../img/writing.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.seasons:nth-child(3) > div > div:nth-child(3) > .plans_ph > div{
+	height: 77%;
+	margin-top: -4px;
+	background-image: url(../img/tennis.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.seasons:nth-child(4) > div > div:nth-child(1) > .plans_ph > div{
+	height: 70%;
+	background-image: url(../img/colosseum.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.seasons:nth-child(4) > div > div:nth-child(2) > .plans_ph > div{
+	background-image: url(../img/drive.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.seasons:nth-child(4) > div > div:nth-child(3) > .plans_ph > div{
+	height: 105%;
+	margin-top: -35px;
+	background-image: url(../img/think.jpg);
+	background-size: cover;
+	background-position: center;
+}
